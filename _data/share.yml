@@ -16,9 +16,13 @@ platforms:
 
   # Uncomment below if you need to.
   #
-  # - type: Linkedin
-  #   icon: "fab fa-linkedin"
-  #   link: "https://www.linkedin.com/sharing/share-offsite/?url=URL"
+  - type: Linkedin
+    icon: "fab fa-linkedin"
+    link: "https://www.linkedin.com/sharing/share-offsite/?url=URL"
+
+  - type: Youtube
+    icon: "fab fa-youtube"
+    link: "https://www.youtube.com/channel/UCnJ-6suTrrhZqQPttMq8E-Q"
   #
   # - type: Weibo
   #   icon: "fab fa-weibo"

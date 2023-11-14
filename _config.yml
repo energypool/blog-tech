@@ -73,7 +73,7 @@ theme_mode: light
 img_cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: https://www.energy-pool.eu/wp-content/uploads/2021/09/energy-pool-logo-web.png
+avatar: https://media.licdn.com/dms/image/C4D0BAQFj48EC4AtpMw/company-logo_200_200/0/1641313260711/energy_pool_logo?e=1707955200&v=beta&t=zr2F6YG8EqoFiCc76vWxtHNcNUWSj1CereiFJXTc4Es
 
 # boolean type, the global switch for TOC in posts.
 toc: true
