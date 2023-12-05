@@ -127,19 +127,23 @@ In `Security -> Users -> Create local user`:
 If you are using a Helm chart for Nexus, you can setup a reverse-proxy on the port defined in the previously created docker-group `docker`:
 
 1. Enable service & update `targetPort` with previously defined port [here](https://github.com/sonatype/nxrm3-helm-repository/blob/main/nxrm-aws-resiliency/values.yaml#L95-L100):
-```yaml
+
+```
 service:
   docker:
     enabled: true
     targetPort: 8082
 ```
+
 2. Enable ingress and setup it [here](https://github.com/sonatype/nxrm3-helm-repository/blob/main/nxrm-aws-resiliency/values.yaml#L60C48-L65):
-```yaml
+
+```
 ingress:
   dockerIngress:
     enabled: true
     host: image-registry.my.domain
 ```
+
 3. Redeploy Nexus
 
 ## Tests
@@ -183,7 +187,8 @@ In our Kubernetes cluster in v1.28 (and recent Kubernetes version), Containerd i
 To configure Containerd, we will use [Karpenter NodeTemplates userdata](https://karpenter.sh/v0.31/concepts/node-templates/#specuserdata) to inject configuration during node startup (we haven't upgraded Karpenter yet, but it is named `EC2NodeClass` since v0.32).
 
 1. Add this configuration to your `NodeTemplate`:
-```yaml
+
+```
 userData: |
   #!/bin/bash
   mkdir -p /etc/containerd/certs.d/docker.io
@@ -201,6 +206,7 @@ userData: |
 
   EOT
 ```
+
 2. Redeploy Karpenter
 3. Launch a rolling-update on your Karpenter `Machines`. 
 
